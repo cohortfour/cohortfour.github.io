@@ -7,35 +7,50 @@
 		html {
 			height: 100%;
 			width: 100%;
-		    background-image: url(img/bg@jpeg50_mobile.jpg);
+		    background-repeat: no-repeat;
 		    background-color: #000;
+		    background-size: cover;
 		}
 		html, body, #wrapper {
-   height:100%;
-   width: 100%;
-   margin: 0;
-   padding: 0;
-   border: 0;
-}
-#wrapper td {
-   vertical-align: middle;
-   text-align: center;
-}
-img {
-	width: 85%;
-}
+		   height:100%;
+		   width: 100%;
+		   margin: 0;
+		   padding: 0;
+		   border: 0;
+		}
+		#wrapper td {
+		   vertical-align: middle;
+		   text-align: center;
+		}
 
+		/* mobile devices, vertical layout */
+		@media only screen and (max-width: 900px) {
+			img {
+				width: 77.5%;
+			}
+			html {
+				background-image: url(img/bg_mobile@1x_jpg80.jpg);
+			}
+		}
+
+		/* larger devices, desktop layout */
+		@media only screen and (min-width: 900px) {
+			img {
+				height: 50%;
+			}
+			html {
+				background-image: url(img/bg_desktop@1x_jpg80.jpg);
+			}
+		}
 	</style>
 </head>
 
 <body>
-	<div class="frame">
-		
-	</div>
 	<table id="wrapper">
-  <tr>
-    <td><img src="img/logo.svg"></td>
-  </tr>
-</table>
+	 	<tr>
+	    	<td><img src="img/logo.svg"></td>
+	 	</tr>
+	</table>
 </body>
+
 </html>
